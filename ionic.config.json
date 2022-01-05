@@ -1,0 +1,7 @@
+{
+  "name": "AppFirstIONIC",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

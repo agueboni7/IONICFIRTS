@@ -1,0 +1,28 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="secondary">
+    <ion-buttons slot="start">
+      <ion-menu-button ></ion-menu-button>
+    </ion-buttons>
+    <ion-title size="large">
+      Home
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-card>
+    <ion-card-header>
+      <ion-card-subtitle>Signed by Xabotta Consolitated@</ion-card-subtitle>
+      <ion-card-title>TASSO CREATION@FORFIRST</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-img width="" height="" [src]="contact.logo"></ion-img>
+      <ion-list>
+        <ion-item>Nom: <strong>{{contact.name}}</strong></ion-item>
+        <ion-item>Email: <strong>{{contact.email}}</strong></ion-item>
+        <ion-item>Téléphone:<strong>{{contact.tel}}</strong></ion-item>
+      </ion-list>
+      <ion-img src="{{contact.location}}"></ion-img>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

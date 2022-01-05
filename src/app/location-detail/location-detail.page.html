@@ -1,0 +1,42 @@
+<ion-header>
+  <ion-toolbar color="secondary">
+    <ion-buttons slot="start">
+      <ion-menu-button ></ion-menu-button>
+    </ion-buttons>
+    <ion-buttons slot="end"> 
+      <ion-button (click)="onClick()">
+        <ion-icon name="camera"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>Detail-Location</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item >
+      <ion-label>Titre:<strong> {{currentPlace.titre}}</strong> </ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-label>City: <strong> {{currentPlace.city}} </strong> </ion-label>
+    </ion-item>
+     <ion-item>
+       <ion-label>Country: <strong> {{currentPlace.country}} </strong> </ion-label>
+     </ion-item>
+     <ion-item>
+      <ion-label>KeyWords: <strong> {{currentPlace.keywords}} </strong> </ion-label>
+    </ion-item>
+  </ion-list>
+      <!-- <ion-card>
+      <ion-card-content>
+        <agm-map [latitude]="currentPlace.coordonates.latitude" [longitude]="currentPlace.coordonates.longitude">
+          <agm-marker [latitude]="currentPlace.coordonates.latitude" [longitude]="currentPlace.coordonates.longitude"></agm-marker>
+        </agm-map>
+      </ion-card-content>
+    </ion-card> -->
+  <ion-card>
+    <ion-card-content *ngFor="let p of currentPlace.photo">
+      <ion-img src="{{p}}"></ion-img>
+    </ion-card-content>
+  </ion-card>
+</ion-content>
